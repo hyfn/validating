@@ -101,7 +101,7 @@ interface ValidatingInterface {
      *
      * @return bool
      */
-    public function isValid();
+    public function isModelValid();
 
     /**
      * Returns if the model is valid, otherwise throws an exception.

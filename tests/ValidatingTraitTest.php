@@ -111,7 +111,7 @@ class ValidatingTraitTest extends \PHPUnit_Framework_TestCase {
               'messages' => Mockery::mock('Illuminate\Support\MessageBag')
             ]));
 
-        $result = $this->trait->isValid();
+        $result = $this->trait->isModelValid();
 
         $this->assertTrue($result);
     }
@@ -127,7 +127,7 @@ class ValidatingTraitTest extends \PHPUnit_Framework_TestCase {
                 'messages' => $messageBag
             ]));
 
-        $result = $this->trait->isValid();
+        $result = $this->trait->isModelValid();
 
         $this->assertFalse($result);
         $this->assertSame($messageBag, $this->trait->getErrors());
@@ -146,7 +146,7 @@ class ValidatingTraitTest extends \PHPUnit_Framework_TestCase {
           'messages' => $validMessageBag
         ]));
 
-      $result = $this->trait->isValid();
+      $result = $this->trait->isModelValid();
 
       $this->assertTrue($result);
       $this->assertSame($validMessageBag, $this->trait->getErrors());

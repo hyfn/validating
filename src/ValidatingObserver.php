@@ -45,7 +45,7 @@ class ValidatingObserver {
             // if it returns a value.
             if ($this->fireValidatingEvent($model, $event) !== null) return;
 
-            if ($model->isValid() === false)
+            if ($model->isModelValid() === false)
             {
                 // Fire the validating failed event.
                 $this->fireValidatedEvent($model, 'failed');

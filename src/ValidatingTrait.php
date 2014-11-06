@@ -198,7 +198,7 @@ trait ValidatingTrait {
      *
      * @return bool
      */
-    public function isValid()
+    public function isModelValid()
     {
         $rules = $this->getRules();
 
@@ -213,7 +213,7 @@ trait ValidatingTrait {
      */
     public function isValidOrFail()
     {
-        if ( ! $this->isValid())
+        if ( ! $this->isModelValid())
         {
             $this->throwValidationException();
         }
@@ -228,7 +228,7 @@ trait ValidatingTrait {
      */
     public function isInvalid()
     {
-        return ! $this->isValid();
+        return ! $this->isModelValid();
     }
 
     /**

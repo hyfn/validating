@@ -56,7 +56,7 @@ Now, you have access to some plesant functionality.
 
 ```php
 // Check whether the model is valid or not.
-$post->isValid(); // true
+$post->isModelValid(); // true
 
 // Or check if it is invalid or not.
 $post->isInvalid(); // false
